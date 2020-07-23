@@ -1,0 +1,13 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^apq\.cl$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.apq\.cl$
+RewriteRule ^home\.html$ "http\:\/\/www\.apq\.cl\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^apq\.cl$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.apq\.cl$
+RewriteRule ^home\.htm\/?(.*)$ "http\:\/\/www\.apq\.cl\/$1" [R=301,L]
+
